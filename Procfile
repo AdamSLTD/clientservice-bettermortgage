@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 templets/
+web: vendor/bin/heroku-php-apache2 templates/
