@@ -752,19 +752,27 @@
     <script src="./js/chunkCommon.js" async=""></script>
     <script src="./js/runtimeWebpack.js" async=""></script>
     <script src="./js/chunkStyles.js" async=""></script>
-
+    <script>
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
    
 
 
 </body>
 <script>
-clearStorage = () => {
+function clearStorage()  {
     sessionStorage.clear();
     localStorage.clear();
     localStorage.setItem("service_key", "3f64052c-30c3-11ea-afcd-0610d74d64fc");
     console.log("setting key & clearing")
 }
 clearStorage()
+
+$('document').ready(function(){ 
+            console.log("key",this._skey)
+            console.log("window",window.localStorage.service_key)
+        });
 </script>
 
 
