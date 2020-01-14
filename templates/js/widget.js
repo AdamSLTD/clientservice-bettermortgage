@@ -1,5 +1,5 @@
 var _domain_name;
-const _attr_key;
+const _attr_key = "3f64052c-30c3-11ea-afcd-0610d74d64fc" ;
 var _IMIchat_IsValidNavigation;
 var _IMIchat_callback_dic = {};
 
