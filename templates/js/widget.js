@@ -21,7 +21,7 @@ var IMIChatInit = function () {
         init: function () {
             try {
                 _IMIchat_IsValidNavigation = false;
-                _attr_key = document.getElementById("divicw").getAttribute("data-bind");
+                _attr_key = "3f64052c-30c3-11ea-afcd-0610d74d64fc";
 
                 var body = document.getElementsByTagName('body')[0];
 
@@ -46,7 +46,7 @@ var IMIChatInit = function () {
                         "<iframe class=\"chatbutton\" id=\"imi-chatbutton\" title=\"Livechat launcher icon\" name=\"Livechat launcher icon\"></iframe>" +
                         "<div class=\"main-unreadchat-cont\"><iframe class=\"chatunread-frame\"  id=\"chatunread-frame\" allowtransparency=\"true\" title=\"Unread Messages\" name=\"Unread Messages\"></iframe></div>" +
                         "<div class=\"main-chat-cont\" id=\"divchatmain\" style=\"display:none;\"> <div class=\"main-chat-cont-sub\">" +
-                        "<iframe class=\"chatwindow-frame\" onload=\"IMIChatInit.onIframeLoad()\" allowfullscreen id=\"divchataside\"  src=\"" + IMIGeneral.domainName() + "/widgetloader.html?docwidth=" + docwidth + "&id=" + document.getElementById("divicw").getAttribute("data-bind") + "&org=" + document.getElementById("divicw").getAttribute("data-org") + "\" title=\"Chat Conversation Window\" name=\"Conversation Window\" role=\"complementary\"></iframe>" +
+                        "<iframe class=\"chatwindow-frame\" onload=\"IMIChatInit.onIframeLoad()\" allowfullscreen id=\"divchataside\"  src=\"" + IMIGeneral.domainName() + "/widgetloader.html?docwidth=" + docwidth + "&id=" + "3f64052c-30c3-11ea-afcd-0610d74d64fc" + "&org=" + document.getElementById("divicw").getAttribute("data-org") + "\" title=\"Chat Conversation Window\" name=\"Conversation Window\" role=\"complementary\"></iframe>" +
                         "</div></div>" +
                         "<iframe allowfullscreen class=\"imichat-fullscreen-modal\" id=\"imichat-fullscreen-modal\"src=\"" + IMIGeneral.domainName() + "/centerpagepost.html\" title=\"Chat Full Screen Priority message\"></iframe>";
 
@@ -133,7 +133,7 @@ var IMIChatInit = function () {
                 var destination = document.getElementById('divchataside').contentWindow;
                 msg = {
                     "action": "getstyle",
-                    "attrkey": document.getElementById("divicw").getAttribute("data-bind"),
+                    "attrkey": "3f64052c-30c3-11ea-afcd-0610d74d64fc",
                     "host": window.location.hostname
                 };
                 destination.postMessage(JSON.stringify(msg), domainUrl);
@@ -167,7 +167,7 @@ var IMIChatInit = function () {
 
                     var badgecount = " <span class=\"badge\" id=\"chattotalbadge\" {0}>{1}</span> ";
                     if (localStorage.getItem(fingerprint + "_" + _skey + "_badgecount") != null) {
-                        var count = localStorage.getItem(fingerprint + "_" + _skey + "_badgecount");
+                        var count = localStorage.getItem(fingerprint + "_" + "3f64052c-30c3-11ea-afcd-0610d74d64fc" + "_badgecount");
                         if (count > 0) {
                             badgecount = badgecount.replace("{0}", "style=\"display:block;\"").replace("{1}", count);
                         } else {
@@ -250,8 +250,8 @@ var IMIChatInit = function () {
                     innerDoc.getElementById("addClass").setAttribute("aria-label", "Close web chat");
                     document.getElementById('imi-chatbutton').contentWindow.document.getElementById("chattotalbadge").style.display = "none";
                     document.getElementById('imi-chatbutton').contentWindow.document.getElementById("chattotalbadge").innerText = "";
-                    localStorage.setItem(fingerprint + "_" + _skey + "_badgecount", 0);
-                    localStorage.setItem(fingerprint + "_" + _skey + "_cardcount", 0);
+                    localStorage.setItem(fingerprint + "_" + "3f64052c-30c3-11ea-afcd-0610d74d64fc" + "_badgecount", 0);
+                    localStorage.setItem(fingerprint + "_" + "3f64052c-30c3-11ea-afcd-0610d74d64fc" + "_cardcount", 0);
                     IMIChatInit.clearmsgcards();
                     // if (IMIGeneral.getBrowserName() == "safari") {
                     // if (IMIGeneral.detectIOS()) {
@@ -277,7 +277,7 @@ var IMIChatInit = function () {
                     document.getElementById("divchatmain").style.display = "none";
                     innerDoc.getElementById("addClass").setAttribute("class", "open-btn state " + buttonType);
                     document.getElementById('chatunread-frame').style.display = "block";
-                    localStorage.setItem(fingerprint + "_" + _skey + "_cardcount", 0);
+                    localStorage.setItem(fingerprint + "_" + "3f64052c-30c3-11ea-afcd-0610d74d64fc" + "_cardcount", 0);
                     return;
                 }
                 //var iframeEl = document.getElementById("divchataside");
@@ -293,7 +293,7 @@ var IMIChatInit = function () {
             document.getElementById('chatunread-frame').contentWindow.document.getElementById("ancclearcards").style.display = "none";
             //document.getElementById('imi-chatbutton').contentWindow.document.getElementById("chattotalbadge").style.display = "none";
             //document.getElementById('imi-chatbutton').contentWindow.document.getElementById("chattotalbadge").innerText == "";
-            localStorage.setItem(fingerprint + "_" + _skey + "_cardcount", 0);
+            localStorage.setItem(fingerprint + "_" + "3f64052c-30c3-11ea-afcd-0610d74d64fc" + "_cardcount", 0);
         },
         openchat: function (event) {
             document.getElementById('imichat-fullscreen-modal').className = 'imichat-fullscreen-modal';
@@ -335,7 +335,7 @@ var IMIChatInit = function () {
                     var cardcount;
                     var checkbadgecount;
                     if (innerDivs == undefined) {
-                        localStorage.setItem(event.data.fingerprint + "_" + _skey + "_cardcount", 1);
+                        localStorage.setItem(event.data.fingerprint + "_" + "3f64052c-30c3-11ea-afcd-0610d74d64fc" + "_cardcount", 1);
                     }
                     document.getElementById('imi-chatbutton').contentWindow.document.getElementById("chattotalbadge").style.display = "block";
 
@@ -432,11 +432,11 @@ var IMIChatInit = function () {
                                 msg: event.data.msg
                             }, "*");
                         }
-                        cardcount = parseInt(localStorage.getItem(event.data.fingerprint + "_" + _skey + "_cardcount")) + 1;
-                        localStorage.setItem(event.data.fingerprint + "_" + _skey + "_cardcount", cardcount);
+                        cardcount = parseInt(localStorage.getItem(event.data.fingerprint + "_" + "3f64052c-30c3-11ea-afcd-0610d74d64fc" + "_cardcount")) + 1;
+                        localStorage.setItem(event.data.fingerprint + "_" + "3f64052c-30c3-11ea-afcd-0610d74d64fc" + "_cardcount", cardcount);
                         localStorage.setItem("fingerprint", event.data.fingerprint);
 
-                        localStorage.setItem(event.data.fingerprint + "_" + _skey + "_badgecount", count);
+                        localStorage.setItem(event.data.fingerprint + "_" + "3f64052c-30c3-11ea-afcd-0610d74d64fc" + "_badgecount", count);
                         document.getElementById('imi-chatbutton').contentWindow.document.getElementById("chattotalbadge").innerText = count;
                     }
 
@@ -475,7 +475,7 @@ var IMIChatInit = function () {
                     var destination = document.getElementById('divchataside').contentWindow;
                     destination.postMessage({
                         action: 'proactive-manager-loaded',
-                        attrkey: document.getElementById("divicw").getAttribute("data-bind"),
+                        attrkey: "3f64052c-30c3-11ea-afcd-0610d74d64fc",
                         host: window.location.hostname
                     }, "*");
 
