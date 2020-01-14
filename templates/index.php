@@ -1,2 +1,3 @@
-<?php include_once("index.html"); ?>
-getenv(key)
+<?php include_once("index.html"); 
+echo getenv(key)
+?>
