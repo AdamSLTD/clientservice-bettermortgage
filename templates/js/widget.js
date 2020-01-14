@@ -13,7 +13,7 @@ var IMIChatInit = function () {
     } catch (e) { }
        //var domainUrl = "http://widget.imichat.co";
     var domainUrl = "https://media.imi.chat";
-    var _skey = "3f64052c-30c3-11ea-afcd-0610d74d64fc";
+    const _skey = "3f64052c-30c3-11ea-afcd-0610d74d64fc";
     return {
         domainName: function () {
             return "https://media.imi.chat/widget";
