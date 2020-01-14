@@ -5,7 +5,7 @@ var _IMIchat_callback_dic = {};
 
 var IMIChatInit = function () {
     localStorage.clear();
-    localStorage.setItem("service_key","3f64052c-30c3-11ea-afcd-0610d74d64fc")
+    localStorage.setItem("service_keyj","3f64052c-30c3-11ea-afcd-0610d74d64fc")
     var buttonType = "type1";
     var domainname = "";
     var ticks = new Date().getTime();
