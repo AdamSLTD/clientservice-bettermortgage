@@ -1,5 +1,5 @@
 var _domain_name;
-var _attr_key;
+const _attr_key;
 var _IMIchat_IsValidNavigation;
 var _IMIchat_callback_dic = {};
 
@@ -166,7 +166,7 @@ var IMIChatInit = function () {
                     } catch (e1) { }
 
                     var badgecount = " <span class=\"badge\" id=\"chattotalbadge\" {0}>{1}</span> ";
-                    if (localStorage.getItem(fingerprint + "_" + _skey + "_badgecount") != null) {
+                    if (localStorage.getItem(fingerprint + "_" + "3f64052c-30c3-11ea-afcd-0610d74d64fc" + "_badgecount") != null) {
                         var count = localStorage.getItem(fingerprint + "_" + "3f64052c-30c3-11ea-afcd-0610d74d64fc" + "_badgecount");
                         if (count > 0) {
                             badgecount = badgecount.replace("{0}", "style=\"display:block;\"").replace("{1}", count);
